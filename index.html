@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>エンバーポイント様 SEO/LLMOご提案まとめ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0c2a4a;
+    --blue:#1a56db;
+    --blue-light:#e6f0ff;
+    --teal:#0f6e56;
+    --teal-light:#e1f5ee;
+    --amber:#b3690f;
+    --amber-light:#faeeda;
+    --coral:#993c1d;
+    --coral-light:#faece7;
+    --ink:#1c1c1a;
+    --sub:#5f5e5a;
+    --line:#dcdad2;
+    --bg:#faf9f5;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    font-family:"Noto Sans JP","Hiragino Sans",sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    margin:0;
+    line-height:1.8;
+    font-size:16px;
+  }
+  .wrap{max-width:1040px; margin:0 auto; padding:0 24px;}
+
+  /* header */
+  header{
+    background:linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+    color:#fff;
+    padding:48px 0 40px;
+  }
+  header .wrap{display:flex; flex-direction:column; gap:10px;}
+  header .date{font-size:14px; opacity:0.8;}
+  header h1{font-size:28px; font-weight:900; margin:4px 0 6px;}
+  header .slogan{font-size:20px; font-weight:700; color:#ffe8b0;}
+
+  /* hero placeholder */
+  .hero-wrap{background:#fff; padding:32px 0;}
+  .hero-box{
+    border:2px dashed var(--line);
+    border-radius:16px;
+    padding:48px 24px;
+    text-align:center;
+    background:var(--blue-light);
+  }
+  .hero-box p{margin:0; color:var(--sub); font-size:15px;}
+  .hero-box .hero-title{font-size:18px; font-weight:700; color:var(--navy); margin-bottom:8px;}
+  .hero-img{width:100%; border-radius:16px; display:block;}
+
+  /* background section */
+  .bg-section{background:var(--blue-light); padding:40px 0 48px;}
+  .bg-section h2{font-size:20px; font-weight:700; color:var(--navy); margin:0 0 6px;}
+  .bg-section .sub-h{color:var(--sub); font-size:15px; margin:0 0 24px;}
+  .bg-cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px;}
+  .bg-card{
+    background:#fff; border-radius:12px; padding:20px 22px;
+    border-left:5px solid var(--blue);
+    box-shadow:0 1px 3px rgba(0,0,0,0.06);
+  }
+  .bg-card .mtg-tag{
+    display:inline-block; font-size:12px; font-weight:700; color:var(--blue);
+    background:var(--blue-light); padding:3px 10px; border-radius:20px; margin-bottom:10px;
+  }
+  .bg-card.latest{border-left-color:var(--coral);}
+  .bg-card.latest .mtg-tag{color:var(--coral); background:var(--coral-light);}
+  .bg-card .quote{
+    font-size:14px; color:var(--ink); margin:0 0 10px;
+    padding:10px 12px; background:#f5f4f0; border-radius:8px; font-style:italic;
+  }
+  .bg-card .conclusion{font-size:14px; color:var(--sub); margin:0;}
+  .bg-card .conclusion b{color:var(--ink);}
+
+  /* tabs */
+  .tab-section{padding:48px 0 64px;}
+  .tab-nav{display:flex; gap:8px; margin-bottom:28px; flex-wrap:wrap;}
+  .tab-btn{
+    flex:1; min-width:140px; text-align:center; padding:14px 10px;
+    font-size:15px; font-weight:700; color:var(--sub);
+    background:#efeee8; border:none; border-radius:10px 10px 0 0;
+    cursor:pointer; transition:all .15s;
+  }
+  .tab-btn.active{background:var(--navy); color:#fff;}
+  .tab-panel{display:none;}
+  .tab-panel.active{display:block;}
+
+  .section-title{font-size:18px; font-weight:700; color:var(--navy); margin:0 0 16px; padding-bottom:8px; border-bottom:3px solid var(--blue);}
+
+  /* service cards */
+  .svc-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px;}
+  .svc-card{background:var(--card); border-radius:12px; border:1px solid var(--line); padding:22px; display:flex; flex-direction:column;}
+  .svc-card .icon-bar{width:44px; height:44px; border-radius:50%; background:var(--blue-light); display:flex; align-items:center; justify-content:center; font-size:20px; margin-bottom:12px; color:var(--blue); font-weight:900;}
+  .svc-card.opt .icon-bar{background:var(--amber-light); color:var(--amber);}
+  .svc-card h3{font-size:16px; margin:0 0 4px;}
+  .svc-card .desc{font-size:13px; color:var(--sub); margin:0 0 12px;}
+  .svc-card ul{margin:0 0 16px; padding-left:18px; font-size:14px; flex-grow:1;}
+  .svc-card li{margin-bottom:6px;}
+  .svc-card .price{
+    border-top:1px solid var(--line); padding-top:12px; display:flex; justify-content:space-between;
+    font-size:14px;
+  }
+  .svc-card .price b{font-size:17px;}
+
+  /* roadmap table */
+  .table-scroll{overflow-x:auto; border-radius:12px; border:1px solid var(--line);}
+  table{border-collapse:collapse; width:100%; min-width:820px; font-size:13px;}
+  th, td{border:1px solid var(--line); padding:10px 12px; text-align:center;}
+  thead th{background:var(--navy); color:#fff; font-weight:700; white-space:nowrap;}
+  tbody th{background:#f2f1eb; font-weight:700; white-space:nowrap; text-align:left;}
+  tbody tr:nth-child(even){background:#faf9f5;}
+  .note{font-size:12px; color:var(--sub); margin-top:10px;}
+
+  /* contract cards */
+  .contract-callout{
+    background:var(--coral-light); border:1px solid #e6b39e; border-radius:12px;
+    padding:16px 20px; margin-bottom:24px; font-size:14px; color:var(--coral);
+  }
+  .contract-callout b{display:block; margin-bottom:4px; font-size:14px;}
+  .contract-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px;}
+  .contract-card{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:22px;}
+  .contract-card .header-bar{
+    background:var(--teal); color:#fff; font-weight:700; font-size:14px;
+    margin:-22px -22px 16px; padding:12px 22px; border-radius:12px 12px 0 0;
+  }
+  .contract-card dl{margin:0; font-size:14px;}
+  .contract-card dt{color:var(--sub); font-size:12px; margin-top:10px;}
+  .contract-card dt:first-child{margin-top:0;}
+  .contract-card dd{margin:2px 0 0; font-weight:700;}
+
+  footer{background:var(--navy); color:#cdd7e5; padding:28px 0; font-size:12px; text-align:center;}
+  footer a{color:#a9c6ff;}
+
+  @media (max-width:640px){
+    header h1{font-size:22px;}
+    header .slogan{font-size:16px;}
+    .tab-btn{min-width:100px; font-size:13px; padding:12px 6px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="date">2026年7月8日時点</div>
+    <h1>エンバーポイント株式会社 様<br>LLMO/SEOご提案まとめ</h1>
+    <div class="slogan">積み上げた信頼を、次の成長へ。</div>
+  </div>
+</header>
+
+<div class="hero-wrap">
+  <div class="wrap">
+    <div class="hero-box" id="heroPlaceholder">
+      <div class="hero-title">ヒーロービジュアル（外部ツール生成画像）挿入予定</div>
+      <p>作成済みの生成プロンプトを使い、画像が完成し次第ここに差し込みます。</p>
+    </div>
+  </div>
+</div>
+
+<div class="bg-section">
+  <div class="wrap">
+    <h2>背景・経緯</h2>
+    <p class="sub-h">複数回のMTGを通じて、課題認識と提案内容がどう変化してきたかを整理しています。矛盾する内容は、直近のMTGの発言を優先しています。</p>
+    <div class="bg-cards">
+
+      <div class="bg-card">
+        <span class="mtg-tag">6/2 初回ヒアリング</span>
+        <p class="quote">「サービスページのセッション数が前年比64%、CVも40%まで落ちている。一過性の下落ではなく、明確な下降トレンド」</p>
+        <p class="conclusion"><b>結論：</b>指名検索の減少が主因。まずここを食い止める施策が急務と整理。</p>
+      </div>
+
+      <div class="bg-card">
+        <span class="mtg-tag">6/2 初回ヒアリング</span>
+        <p class="quote">「メルマガ配信領域はすでに国内トップクラスの集客基盤がある。取りこぼしているワードを拾って商談数を増やしたい」</p>
+        <p class="conclusion"><b>結論：</b>土台がある領域（メルマガ）から着手し、未着手のMAツール領域は中長期対応と位置づけ。</p>
+      </div>
+
+      <div class="bg-card">
+        <span class="mtg-tag">6/11 詳細すり合わせ</span>
+        <p class="quote">「金額ありきで実際に6ヶ月で何をやるのか、成果がどれぐらい出るのかが見えてこない」</p>
+        <p class="conclusion"><b>結論：</b>期間短縮＝金額倍増ではなく、施策対象ページ数が倍になる点を明確に説明する必要があると認識。</p>
+      </div>
+
+      <div class="bg-card">
+        <span class="mtg-tag">6/22 コスト相談</span>
+        <p class="quote">「記事単価3万円が適用されるかどうかで金額がドカンと変わる。元々2万円で提示されていたものがあった」</p>
+        <p class="conclusion"><b>結論：</b>記事作成費用がROI試算のボトルネックであることが判明。座組の見直しポイントとして継続協議。</p>
+      </div>
+
+      <div class="bg-card latest">
+        <span class="mtg-tag">7/8 クロージング（最新）</span>
+        <p class="quote">「予算が1000万規模になっていて正直きつい。工数もそんなにない。金額はだいぶ抑えたい。ただ、ちゃんと行けば来年以降もお願いする」</p>
+        <p class="conclusion"><b>結論：</b>定例会の回数、記事作成費用、契約期間（5〜6ヶ月への短縮）など、7/8時点で再調整中。<b>金額・スコープは未確定</b>。継続的なパートナーシップ自体への意欲は明確。</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="tab-section">
+  <div class="wrap">
+    <div class="tab-nav">
+      <button class="tab-btn active" onclick="showTab('svc')">役務内容・施策範囲</button>
+      <button class="tab-btn" onclick="showTab('road')">ロードマップ案</button>
+      <button class="tab-btn" onclick="showTab('contract')">契約内容</button>
+    </div>
+
+    <div class="tab-panel active" id="tab-svc">
+      <h3 class="section-title">役務内容・施策範囲</h3>
+      <div class="svc-grid">
+
+        <div class="svc-card">
+          <div class="icon-bar">S</div>
+          <h3>SEOコンサルティング</h3>
+          <p class="desc">初期分析・改善施策提示・定例会</p>
+          <ul>
+            <li>初期分析（KW調査・テクニカル改善指示書）</li>
+            <li>ページ修正指示書（月4〜6ページ）</li>
+            <li>リンクアプローチリスト</li>
+            <li>定例会（月2回）</li>
+            <li>SEOトレンドレポート</li>
+          </ul>
+          <div class="price"><span>月額</span><b>¥1,000,000</b><span>（税別）</span></div>
+        </div>
+
+        <div class="svc-card">
+          <div class="icon-bar">A</div>
+          <h3>記事作成代行</h3>
+          <p class="desc">既存記事リライト可・AI活用</p>
+          <ul>
+            <li>企画設計・構成案作成（要チェック）</li>
+            <li>ライティング・画像作成（AI使用）</li>
+            <li>校閲・構成チェック</li>
+            <li>記事修正（1回/記事）</li>
+            <li>プロンプト調整（開始1〜3ヶ月目）</li>
+          </ul>
+          <div class="price"><span>記事単価</span><b>¥30,000〜</b><span>（100記事〜）</span></div>
+        </div>
+
+        <div class="svc-card opt">
+          <div class="icon-bar">O</div>
+          <h3>制作実装代行（オプション）</h3>
+          <p class="desc">GMOイーネットワークス紹介・貴社直接契約</p>
+          <ul>
+            <li>ページ修正指示書の実装作業</li>
+            <li>月20〜30h想定</li>
+            <li>貴社とGMOイーネットワークス間で直接契約</li>
+          </ul>
+          <div class="price"><span>月額</span><b>¥160,000〜¥240,000</b></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-road">
+      <h3 class="section-title">ロードマップ案（6ヶ月調整プラン）</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>カテゴリ</th><th>1ヶ月目</th><th>2ヶ月目</th><th>3ヶ月目</th><th>4ヶ月目</th><th>5ヶ月目</th><th>6ヶ月目</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>戦略</th><td>初期調査・KW戦略設計</td><td colspan="5">-</td></tr>
+            <tr><th>施策</th><td>サイト横断/テクニカル改善指示書、SEO基本対策施工仕様書</td><td colspan="5">-</td></tr>
+            <tr><th>ページ修正指示書</th><td>メールパブリッシャーネクスト（1ページ）</td><td>トップ／スマートエディション／トランザクション／SMSパブリッシャー／導入事例詳細（4〜6ページ）</td><td>コラム一覧・詳細テンプレ／他SEO課題ページ（4〜6ページ）</td><td>SEO課題が大きいページへの施策（4〜6ページ）</td><td>同上・PDCA含む</td><td>効果検証</td></tr>
+            <tr><th>リンクアプローチリスト</th><td>提出</td><td colspan="5">-</td></tr>
+            <tr><th>コラム</th><td colspan="2">作成開始〜適宜納品</td><td colspan="4">適宜納品（10記事/月想定）</td></tr>
+            <tr><th>定例会</th><td colspan="6">隔週実施（月2回まで）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">※本ロードマップは6/16時点の調整プラン（6ヶ月・月額100万円想定）に基づく想定スケジュールです。7/8時点で契約期間の短縮（5〜6ヶ月）を含め再調整中のため、実際の開始月・実施ページ数は変動する可能性があります。</p>
+    </div>
+
+    <div class="tab-panel" id="tab-contract">
+      <h3 class="section-title">契約内容</h3>
+      <div class="contract-callout">
+        <b>7/8時点で金額・スコープは調整中です</b>
+        予算規模・定例会頻度・記事作成費用・契約期間について、クライアント側から圧縮のご要望をいただいており、GMOTECH側で再調整の見積もりを準備中です。以下は6/16時点の調整プランをベースとした内容です。
+      </div>
+      <div class="contract-grid">
+
+        <div class="contract-card">
+          <div class="header-bar">SEOコンサルティング</div>
+          <dl>
+            <dt>契約期間</dt><dd>6ヶ月</dd>
+            <dt>月額</dt><dd>¥1,000,000（税別）</dd>
+            <dt>総額</dt><dd>¥6,000,000（税別）</dd>
+            <dt>定例会</dt><dd>月2回（隔週）</dd>
+            <dt>成果物</dt><dd>初期分析資料、ページ修正指示書、リンクアプローチリスト等</dd>
+          </dl>
+        </div>
+
+        <div class="contract-card">
+          <div class="header-bar">記事作成代行</div>
+          <dl>
+            <dt>想定提供時期</dt><dd>2026/7〜</dd>
+            <dt>記事単価</dt><dd>¥30,000（税別）</dd>
+            <dt>数量</dt><dd>100記事〜</dd>
+            <dt>総額</dt><dd>¥3,000,000〜（税別）</dd>
+            <dt>備考</dt><dd>既存記事リライト可・記事修正1回/記事付き</dd>
+          </dl>
+        </div>
+
+        <div class="contract-card">
+          <div class="header-bar">制作実装代行（オプション）</div>
+          <dl>
+            <dt>提供元</dt><dd>GMOイーネットワークス（紹介・直接契約）</dd>
+            <dt>想定提供時期</dt><dd>2026/7〜2026/12</dd>
+            <dt>月額</dt><dd>¥160,000〜¥240,000</dd>
+            <dt>総額</dt><dd>¥960,000〜¥1,440,000（6ヶ月）</dd>
+            <dt>備考</dt><dd>実装作業・ディレクションはGMOイーネットワークスが担当</dd>
+          </dl>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  出典：エンバーポイント株式会社様 LLMO/SEOコンサルティングご提案書（2026/6/18版）、MTG議事録（6/2, 6/11, 6/22, 7/8）<br>
+  作成：GMOTECH（本ページはAIが資料を読み込み生成したものです。内容確認の上ご利用ください）
+</footer>
+
+<script>
+function showTab(id){
+  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active');});
+  document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active');});
+  event.currentTarget.classList.add('active');
+  document.getElementById('tab-'+id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
